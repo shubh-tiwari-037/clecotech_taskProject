@@ -228,7 +228,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import LogoutButton from "./LogoutButton";
-import RefreshTokenButton from "./RefreshTokenButton";
+// import RefreshTokenButton from "./RefreshTokenButton";
 import { GetMeApi } from "../apis/GetMeApi";
 
 const Navbar = () => {
@@ -272,7 +272,8 @@ console.log("ERROR:", error?.response?.data);
             <>
               <span>Welcome 👋 {user.name}</span>
 
-              <RefreshTokenButton />
+              {/* <RefreshTokenButton /> */}
+
               <LogoutButton />
             </>
           ) : (

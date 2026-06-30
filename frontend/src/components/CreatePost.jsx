@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { CreatePostApi } from "../apis/CreatePostApi";
+import { useNavigate } from "react-router-dom";
 
 const CreatePost = () => {
+
+  const navigate=useNavigate()
   const [data, setData] = useState({
     title: "",
     description: "",
@@ -33,6 +36,7 @@ const CreatePost = () => {
         like: 0,
         viwes: 0,
       });
+      navigate("/posts")
     },
 
     onError: (error) => {
